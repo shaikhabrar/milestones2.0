@@ -1,0 +1,153 @@
+body {
+  color: #000;
+  overflow-x: hidden;
+  height: 100%;
+  background-repeat: no-repeat;
+}.birthdayContainer {
+  background-color: #8c9ea7;
+  height: 100vh;
+}
+.filelist {
+     width: 400px;
+     margin-top: 61.5px;
+     height: 80vh;
+     background-color: #EEEEEE;
+  box-shadow:  0 0 10px rgba(0, 0, 0, 0.9);
+
+   }
+.grayBackground{
+  background-color: #8c9ea7!important ;
+
+}
+
+.icon {
+  color: #fff;
+}
+
+.birthBorder {
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 0 1px 1px rgb(255, 255, 255);
+  
+}
+.uploadButton{
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+}
+.uploadBorder {
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 0 1px 1px rgb(255, 255, 255);
+}
+
+.anniBorder {
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 0 1px 1px rgb(255, 255, 255);
+}
+
+.font{
+font-family: 'Playfair Display', serif;
+font-weight: bold;
+font-size: 1.2rem;
+color: #fff;
+text-shadow: 0 0 1px 1px #000;
+}
+
+
+.side-menu {
+  width: 420px;
+  height: 80vh;
+  transition: transform 0.3s ease-in-out;
+  background-color: #0b682dbb;
+  color: #000000;
+  text-align: center;
+  /* border-right: 1px solid #EEEEEE; */
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  
+  margin: 4%;
+  margin-right: 0%;
+}
+.Anniversary{
+  background-color: red;
+}
+  .fontFamily{ 
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+  }
+  .uploadText{
+    color: #EEEEEE;
+    text-decoration: none;
+  }
+
+
+.show {
+  transform: translateX(0);
+}
+
+.hide {
+  transform: translateX(-250px);
+}
+
+.side-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu li {
+  padding: 10px 0;
+}
+
+.side-menu li a {
+
+  color: #1A237E;;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.side-menu li a:hover {
+  color: #000;
+}
+
+.side-menu li.active a {
+  color: #000;
+}
+
+.tabPanel {
+  width: 100%;
+  padding: 20px;
+}
+
+.tabPanel h2 {
+  margin-top: 0;
+}
+
+.tabContainer{
+  width: 100%;
+  height: 80vh;
+  margin: 4%;
+  margin-left: 0%;
+  background-color: #EEEEEE;
+  box-shadow:  0 0 10px rgba(0, 0, 0, 0.9);
+  
+}
+
+
+s
+.header{
+  margin-left: 15px !important;
+}
+
+.tabdata{
+  margin-left: 15px;
+}
+.toggle{
+  margin-left: 100%;
+  width: 20px;
+  
+}
+.birthdaylogo{
+  width: 300px;
+  margin-bottom: 30px;
+}
