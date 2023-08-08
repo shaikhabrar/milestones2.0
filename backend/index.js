@@ -107,9 +107,7 @@ app.post("/fileUploader", upload.single("file"), async (req, res) => {
   )
     .then((updatedUser) => {
       // File uploaded and user updated successfully
-      res
-        .status(200)
-        .json({ message: "File uploaded successfully!", user: updatedUser });
+      res.status(200).json({ message: "File uploaded successfully!", user: updatedUser });
     })
     .catch((error) => {
       // Error occurred while saving the data
