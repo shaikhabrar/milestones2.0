@@ -11,6 +11,7 @@ const { API } = require("./config/" + process.env.NODE_ENV);
 const Tabspanel = ({ activeTab, excelData }) => {
   const [selectedRow, setSelectedRow] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [showModal2, setShowModal2] = useState(false);
   const [currentLimit, setCurrentLimit] = useState(7);
   const [upcomingBirthdays, setUpcomingBirthdays] = useState([]);
   const [upcomingAnniversary, setUpcomingAnniversary] = useState([]);
@@ -19,6 +20,10 @@ const Tabspanel = ({ activeTab, excelData }) => {
   const handleClick = (event, index) => {
     setSelectedRow(index);
     setShowModal(true);
+  };
+  const handleClick2 = (event, index) => {
+    setSelectedRow(index);
+    setShowModal2(true);
   };
 
 
@@ -132,12 +137,21 @@ const Tabspanel = ({ activeTab, excelData }) => {
                     {activeTab === "Birthdays" && (
                       <td className="px-4 py-1 column1">
                         {getTodaysBirthdays(row[1]) ? (
-                          <button
-                            className="btn btn-secondary"
-                            onClick={() => sendBirthdayEmail(row[5])}
-                          >
-                            Send Birthday Email
-                          </button>
+                          <div className="d-flex">
+                            <button
+                              className="btn btn-secondary handleButton"
+                              onClick={() => sendBirthdayEmail(row[5])}
+                            >
+                              Send Birthday Email
+                            </button>
+                            <button
+                              className="btn btn-primary handleButton2"
+                              onClick={(event) => handleClick2(event, index)}
+                            >
+                              Show Info
+                            </button>
+                          </div>
+
                         ) : (
                           <button
                             className="btn btn-primary"
@@ -170,6 +184,25 @@ const Tabspanel = ({ activeTab, excelData }) => {
                   <p>Favourite Food: {upcomingBirthdays[selectedRow][4]}</p>
                   <p>Employee Email: {upcomingBirthdays[selectedRow][5]}</p>
                   <button className="closeButton" onClick={() => setShowModal(false)}>Close</button>
+                </div>
+              )}
+            </ReactModal>
+            <ReactModal
+              isOpen={showModal2}
+              onRequestClose={() => setShowModal2(false)}
+              contentLabel="Additional Information"
+              className="customModal"
+              overlayClassName="customOverlay"
+            >
+              {selectedRow !== null && todaysBirthdays[selectedRow] && (
+                <div>
+                  <h3>Additional Information</h3>
+                  <p>Employee Name: {todaysBirthdays[selectedRow][0]}</p>
+                  <p>Date of Birth: {todaysBirthdays[selectedRow][1]}</p>
+                  <p>Favourite Colour: {todaysBirthdays[selectedRow][3]}</p>
+                  <p>Favourite Food: {todaysBirthdays[selectedRow][4]}</p>
+                  <p>Employee Email: {todaysBirthdays[selectedRow][5]}</p>
+                  <button className="closeButton" onClick={() => setShowModal2(false)}>Close</button>
                 </div>
               )}
             </ReactModal>
@@ -230,7 +263,7 @@ const Tabspanel = ({ activeTab, excelData }) => {
           {renderPanel(upcomingBirthdays)}
         </TabPanel>
         <TabPanel>
-          {renderPanel(upcomingAnniversary)}
+          {renderPanel(upcomingBirthdays)}
         </TabPanel>
       </Tabs>
     </div>
