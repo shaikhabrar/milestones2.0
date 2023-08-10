@@ -5,17 +5,33 @@ import multer from "multer";
 import XLSX from "xlsx";
 import xlsx from "xlsx";
 import fs from "fs";
+// import fileUploader from "..frontend/fileUploader"
+// const path = require('path');
 // import path from "path";
 // import { fileURLToPath } from "url";
-// import path, { dirname } from "path";
+import path from "path";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-// const __filename = fileURLToPath(import.meta.url);
-// const _dirname = dirname(_filename);
+// const _filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(_filename);
 const app = express();
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+app.get("/", (req, res) => {
+  console.log(__dirname)
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+ });
+
 const PORT = 9002;
 app.use(cors());
 
 app.use(express.json()); // Parse JSON requests
+
+app.use(express.static("public"));
+
 app.use(express.urlencoded({ extended: true }));
 
 
@@ -224,6 +240,7 @@ app.post("/login", async (req, res) => {
     if (user) {
       if (password === user.password) {
         res.send({ message: "Login successful", user });
+        console.log("helooooooo")
       } else {
         res.send({ message: "Password incorrect" });
       }
