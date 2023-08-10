@@ -4,12 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.min.css";
-import elasticapm from 'elastic-apm-node';
+// import elasticapm from 'elastic-apm-node';
+// import 'stream-http';
+// import 'url';
+import { init as initApm } from "@elastic/apm-rum";
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-elasticapm.start({
+initApm({
   serviceName: 'my-service-name',
   secretToken: 'LzHPl3vqqZZoxHa6f9',
   serverUrl: 'https://9a3569eff2f342168bf5518c0ddcb75c.apm.us-central1.gcp.cloud.es.io:443',
