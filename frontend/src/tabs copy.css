@@ -1,0 +1,29 @@
+.tabContainer{
+
+    scroll-behavior: smooth;
+}
+
+.borderBottom {
+
+    border-bottom:  5px black !important;
+}
+.tabss{
+    background-color: #0b682d72;
+}
+
+
+table{
+    border-collapse: collapse;
+    width: 80%;
+    border: 1px solid #79a5f1;
+    margin: 20px;
+    
+}
+.column1{
+    width: 150px;
+}
+
+.column2{
+    width: 200px;
+    background-color: #79a5f1;
+}

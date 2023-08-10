@@ -1,12 +1,21 @@
 FROM node:alpine
 
-WORKDIR /backend_app
+WORKDIR /app
 
-COPY ./package*.json /backend_app
+COPY ./package*.json /app
 
 RUN npm install
 
-COPY . /backend_app
+COPY . .
+
+FROM node:slim
+# We don't need the standalone Chromium
+# ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+# Copy the app directory from the builder stage
+COPY --from=builder /app /app
+
+WORKDIR /app
+
 
 EXPOSE 9002
 

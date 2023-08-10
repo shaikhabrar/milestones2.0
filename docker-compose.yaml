@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.builder
+    container_name: myapp-builder
+    volumes:
+      - ./backend:/usr/src/app
+
+    ports:
+      - "9002:9002"
+
+    networks:
+      - myapp-network
+
+networks:
+  myapp-network:
+
+
+

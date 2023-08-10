@@ -1,0 +1,63 @@
+.tabContainer {
+
+    scroll-behavior: smooth;
+  }
+  
+  .borderBottom {
+  
+    border-bottom: 5px black !important;
+  }
+  
+  .tabss {
+    background-color: #0b682d72;
+  }
+  
+  
+  table {
+    border-collapse: collapse;
+    width: 80%;
+    border: 1px solid #79a5f1;
+    margin: 20px;
+  
+  }
+  
+  .column1 {
+    width: 150px;
+  }
+  
+  
+  .customModal {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+  
+  .customOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .closeButton {
+    background-color: rgb(165, 13, 13);
+  }
+  
+  .column2 {
+    width: 200px;
+    background-color: #79a5f1;
+  }
