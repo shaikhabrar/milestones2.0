@@ -5,6 +5,7 @@ import multer from "multer";
 import XLSX from "xlsx";
 import xlsx from "xlsx";
 import fs from "fs";
+import elasticapm from 'elastic-apm-node';
 
 
 // import fileUploader from "..frontend/fileUploader"
@@ -18,6 +19,13 @@ import { dirname } from 'path';
 // const _filename = fileURLToPath(import.meta.url);
 // const __dirname = dirname(_filename);
 const app = express();
+
+elasticapm.start({
+  serviceName: 'my-service-name',
+  secretToken: 'LzHPl3vqqZZoxHa6f9',
+  serverUrl: 'https://9a3569eff2f342168bf5518c0ddcb75c.apm.us-central1.gcp.cloud.es.io:443',
+  environment: 'my-environment'
+});
 
 
 const __filename = fileURLToPath(import.meta.url);
