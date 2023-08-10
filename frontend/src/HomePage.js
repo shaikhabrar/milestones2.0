@@ -38,7 +38,7 @@ const HomePage = () => {
       </div>
 
       <div className="by">
-      <p>BY ABRAR SHAIKH2023</p>
+      <p>BY ABRAR SHAIKH2023sdfsdfsfd</p>
       </div>
     </>
   );
