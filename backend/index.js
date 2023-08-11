@@ -6,6 +6,8 @@ import XLSX from "xlsx";
 import xlsx from "xlsx";
 import fs from "fs";
 import elasticapm from 'elastic-apm-node';
+import nodemailer from 'nodemailer';
+
 
 
 // import fileUploader from "..frontend/fileUploader"
@@ -198,7 +200,6 @@ app.get("/fileUploader/:username/:fileId", (req, res) => {
     });
 });
 
-import nodemailer from 'nodemailer';
 // Configure Nodemailer with your email service provider credentials
 const transporter = nodemailer.createTransport({
   service: 'Gmail', // Use your email service provider (e.g., Gmail)
