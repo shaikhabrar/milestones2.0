@@ -34,11 +34,11 @@ const HomePage = () => {
         </div>
       </div>
       <div className="footer">
-      <p>Upload the excel file consists coloumns - Emp Name , Birth Date and Date of Joining as following next to each other.</p>
+      <p>"Unveiling the Future Celebrations: Your Employee Birthdays and Work Anniversaries, Right at Your Fingertips!"</p>
       </div>
 
       <div className="by">
-      <p>BY ABRAR SHAIKH2023sdfsdfsfd</p>
+      <p>BY ABRAR SHAIKH2023</p>
       </div>
     </>
   );

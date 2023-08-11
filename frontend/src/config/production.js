@@ -1,12 +1,11 @@
-// const DOMAIN ="http://34.125.127.98:9002"
-const DOMAIN ="https://my-cloud-run-frontend-v2wk62suia-uc.a.run.app"
-// const DOMAIN ="http://localhost:3000"
-export const API={
-    LOGIN:`${DOMAIN}/login`,
-    SIGNUP:`${DOMAIN}/signup`,
-    FILEUPLOADER:`${DOMAIN}/fileUploader`,
-    USERS:`${DOMAIN}/users`
+// const DOMAIN = "http://localhost:8080"
+const DOMAIN = "https://my-cloud-run-frontend-v2wk62suia-uc.a.run.app"
+
+export const API = {
+  LOGIN: `${DOMAIN}/login`,
+  SIGNUP: `${DOMAIN}/signup`,
+  FILEUPLOADER: `${DOMAIN}/fileUploader`,
+  USERS: `${DOMAIN}/users`,
+  EMAIL: `${DOMAIN}/send-birthday-email`
 };
 
-
-// const DOMAIN ="http://localhost:9002"
